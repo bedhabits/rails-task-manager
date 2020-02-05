@@ -1,0 +1,36 @@
+<!-- #to do a form list -->
+<div class="container">
+  <h1>New Task</h1>
+
+  <%= form_for(@task) do |f| %>
+
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+      <%= f.label :details %>
+      <%= f.text_field :details, class: 'form-control' %>
+    </div>
+
+    <br />
+
+    <div>
+      <%= f.submit class: 'btn btn-primary' %>
+    </div>
+
+  <% end %>
+
+  <br />
+
+  <pre>
+    <i class="fas fa-plus"></i> <%= link_to "Back to tasks", tasks_path %>
+  </pre>
+
+</div>
+
+
+
